@@ -2,37 +2,42 @@ import * as React from "react"
 import {
   ChakraProvider,
   Box,
-  Text,
-  Link,
+  Image,
   VStack,
-  Code,
+  Text,
   Grid,
   theme,
+  Button,
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+import { Typewriter } from "react-simple-typewriter"
+import Logo from "./images/logo.png"
 
-export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
-  </ChakraProvider>
-)
+export const App = () => {
+
+  return(
+    <ChakraProvider theme={theme}>
+      <Box textAlign="center" fontSize="xl">
+        <Grid minH="100vh" p={3}>
+          <ColorModeSwitcher justifySelf="flex-end" />
+          <VStack spacing={8}>
+            <Image src={Logo}/>
+            <Text fontSize={"2xl"}>
+              I'm a Junior 
+              <Typewriter
+              words={[' Developer']}
+              loop={5}
+              cursor
+              cursorStyle='_'
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+              />
+            </Text>
+            <Button variant={'outline'} colorScheme={'teal'}>Works</Button>
+          </VStack>
+        </Grid>
+      </Box>
+    </ChakraProvider>
+  )
+}
