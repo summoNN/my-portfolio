@@ -1,21 +1,14 @@
 import * as React from "react"
 import {
   ChakraProvider,
-  Box,
-  Image,
-  VStack,
-  Text,
-  Grid,
-  theme,
-  Button,
-  useColorMode,
+  theme
 } from "@chakra-ui/react"
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import { Hero } from "./components/Hero";
-import { Works } from "./components/Works";
+import { Works } from "./components/Works/Works";
 
 export const App = () => {
   

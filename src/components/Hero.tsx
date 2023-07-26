@@ -1,11 +1,9 @@
 import {
-    ChakraProvider,
     Box,
     Image,
     VStack,
     Text,
     Grid,
-    theme,
     Button,
     useColorMode,
 } from "@chakra-ui/react"
