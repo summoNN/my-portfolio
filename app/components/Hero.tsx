@@ -16,7 +16,7 @@ export default function UHero () {
         <div className={'flex flex-col justify-center'}>
           <p className={'text-5xl font-extrabold'}>Hi my name is Ilyas Haddad</p>
           <div className={'flex text-4xl font-bold gap-2'}>
-            <span>I'm a </span>
+            <span>Im a </span>
             <Typewriter
               words={['Junior software engineer', 'Gamer', 'Streamer']}
               loop={5}
@@ -30,7 +30,7 @@ export default function UHero () {
         </div>
         <div className="flex justify-center items-center">
           <Image
-            alt="NextUI hero Image"
+            alt="ilyas image"
             src="https://media.licdn.com/dms/image/v2/D4E03AQG7LmlP65nA5Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727769267293?e=1740009600&v=beta&t=MkO36WQsv_WTd_TIK5DT5iVTeUVAEWS0XTDnnPFbUbo"
             width={400}
             className={'rounded-full mr-5'}
@@ -46,10 +46,11 @@ export default function UHero () {
         />
         <UActions
           text={'Download CV'}
-          children={<FaDownload/>}
           src={'/contact'}
           size={'lg'}
-        />
+        >
+          <FaDownload/>
+        </UActions>
       </div>
 
     </div>
