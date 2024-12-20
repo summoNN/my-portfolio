@@ -31,7 +31,7 @@ export default function UHero () {
         <div className="flex justify-center items-center">
           <Image
             alt="ilyas image"
-            src="https://media.licdn.com/dms/image/v2/D4E03AQG7LmlP65nA5Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727769267293?e=1740009600&v=beta&t=MkO36WQsv_WTd_TIK5DT5iVTeUVAEWS0XTDnnPFbUbo"
+            src="/propic.jpeg"
             width={400}
             className={'rounded-full mr-5'}
           />
