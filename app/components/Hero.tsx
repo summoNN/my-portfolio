@@ -9,9 +9,9 @@ export default function UHero () {
     <div className={'h-screen flex flex-col gap-10 justify-center'}>
       <div className={'grid grid-cols-1 lg:grid-cols-[0.5fr_3fr_1fr] gap-5 px-5 justify-between'}>
         <div className={'flex lg:flex-col py-5 gap-2 lg:border-r-2 border-white justify-center lg:items-end pr-10'}>
-          <FaInstagram size={'2em'}/>
-          <FaTwitter size={'2em'}/>
-          <FaLinkedin size={'2em'}/>
+          <a href={'https://www.instagram.com/summonnnnn/'}><FaInstagram size={'2em'}/></a>
+          <a href={'https://x.com/summonhalfa'}><FaTwitter size={'2em'}/></a>
+          <a href={'https://www.linkedin.com/in/ilyas-haddad-6a7116311/'}><FaLinkedin size={'2em'}/></a>
         </div>
         <div className={'flex flex-col justify-center'}>
           <p className={'text-5xl font-extrabold'}>Hi my name is Ilyas Haddad</p>
@@ -19,7 +19,7 @@ export default function UHero () {
             <span>Im a </span>
             <Typewriter
               words={['Junior software engineer', 'Gamer', 'Streamer']}
-              loop={5}
+              loop={Infinity}
               cursor
               cursorStyle='_'
               typeSpeed={70}
@@ -39,18 +39,14 @@ export default function UHero () {
       </div>
 
       <div className={'flex justify-center gap-5'}>
-        <UActions
-          text={'Contact me'}
-          src={'/contact'}
-          size={'lg'}
-        />
-        <UActions
-          text={'Download CV'}
-          src={'/contact'}
-          size={'lg'}
-        >
+        <a href={'../public/cv.pdf'} download={'ilyashaddad_cv'} className={'text-2xl font-bold'}>
+          <UActions
+            text={'Download CV'}
+            size={'lg'}
+          >
           <FaDownload/>
         </UActions>
+        </a>
       </div>
 
     </div>

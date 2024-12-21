@@ -4,19 +4,15 @@ import { redirect } from 'next/navigation'
 
 type ActionsProps = {
   text: string;
-  src: string;
   size?: 'sm' | 'md' | 'lg';
+  onButtonClick?: () => void;
   children?: JSX.Element;
 }
 
-function handleClick(src: string) {
-  redirect(src)
-}
-
-export default function UActions({text, size, src, children}: ActionsProps) {
+export default function UActions({text, size, onButtonClick, children}: ActionsProps) {
   return (
     <div>
-      <Button onClick={() => handleClick(src)} variant={'bordered'} size={size ?? 'sm'}>{text} {children}</Button>
+      <Button onClick={() => onButtonClick ? onButtonClick() : null} variant={'bordered'} size={size ?? 'sm'}>{text} {children}</Button>
     </div>
   )
 }
